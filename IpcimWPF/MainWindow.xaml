@@ -11,6 +11,7 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
 
     </Grid>
 </Window>
