@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Microsoft.Win32;
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,7 +10,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.IO;
 
 namespace IpcimWPF
 {
@@ -64,5 +65,26 @@ namespace IpcimWPF
             tbDomain.Clear();
             tbIp.Clear();
         }
+        private void btnMentes_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+            saveFileDialog.FileName = "iplist.csv";
+
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                using (var writer = new StreamWriter(saveFileDialog.FileName))
+                {
+                    writer.WriteLine("domain-name;ip-address");
+                    foreach (var record in records)
+                    {
+                        writer.WriteLine($"{record.DomainName};{record.IpAddress}");
+                    }
+                }
+
+                MessageBox.Show("Mentés sikeres!");
+            }
+        }
     }
+}
 }
