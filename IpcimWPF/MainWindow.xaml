@@ -9,10 +9,8 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <!-- BAL OLDAL: DataGrid -->
         <DataGrid x:Name="dgData" Grid.Column="0" AutoGenerateColumns="True" Margin="0,0,10,0"/>
 
-        <!-- JOBB OLDAL: bevitel + mentés -->
         <StackPanel Grid.Column="1">
 
             <TextBlock Text="Domain-name:"/>
