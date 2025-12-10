@@ -17,6 +17,7 @@ namespace IpcimWPF
         public MainWindow()
         {
             InitializeComponent();
+            LoadData();
         }
     }
 }
