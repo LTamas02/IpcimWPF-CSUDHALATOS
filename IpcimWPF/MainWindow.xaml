@@ -12,7 +12,9 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <StackPanel Grid.Column="1"/>
+        <StackPanel Grid.Column="1">
+            <Label Content="Label"/>
+        </StackPanel>
 
     </Grid>
 </Window>
