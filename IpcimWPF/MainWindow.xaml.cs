@@ -43,5 +43,7 @@ namespace IpcimWPF
             dgData.ItemsSource = null;
             dgData.ItemsSource = records;
         }
+
+
     }
 }
