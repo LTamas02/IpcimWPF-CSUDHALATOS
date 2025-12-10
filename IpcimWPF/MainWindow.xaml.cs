@@ -13,6 +13,7 @@ namespace IpcimWPF
 {
     public partial class MainWindow : Window
     {
+        private List<IpRecord> records = new List<IpRecord>();
         public MainWindow()
         {
             InitializeComponent();
