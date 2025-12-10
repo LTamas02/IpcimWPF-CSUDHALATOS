@@ -12,6 +12,7 @@
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <StackPanel Grid.Column="1"/>
 
     </Grid>
 </Window>
