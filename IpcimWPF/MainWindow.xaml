@@ -15,8 +15,9 @@
         <StackPanel Grid.Column="1">
             <Label Content="Label"/>
             <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
-        </StackPanel>
-        <Label Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="189,258,0,0" VerticalAlignment="Top"/>
+            <Label  Content="Label"  />
 
+        </StackPanel>
+        
     </Grid>
 </Window>
