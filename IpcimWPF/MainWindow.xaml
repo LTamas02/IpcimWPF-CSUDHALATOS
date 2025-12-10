@@ -16,6 +16,7 @@
             <Label Content="Label"/>
             <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
             <Label  Content="Label"  />
+            <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
 
         </StackPanel>
         
