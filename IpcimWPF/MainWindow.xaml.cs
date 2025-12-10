@@ -45,5 +45,24 @@ namespace IpcimWPF
         }
 
 
+        private void btnBevitel_Click(object sender, RoutedEventArgs e)
+        {
+            string domain = tbDomain.Text.Trim();
+            string ip = tbIp.Text.Trim();
+
+            if (string.IsNullOrEmpty(domain) || string.IsNullOrEmpty(ip))
+            {
+                MessageBox.Show("Mindkét mezőt ki kell tölteni!");
+                return;
+            }
+
+            records.Add(new IpRecord { DomainName = domain, IpAddress = ip });
+
+            dgData.ItemsSource = null;
+            dgData.ItemsSource = records;
+
+            tbDomain.Clear();
+            tbIp.Clear();
+        }
     }
 }
