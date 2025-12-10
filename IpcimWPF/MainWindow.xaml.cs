@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace IpcimWPF
 {
@@ -18,6 +19,29 @@ namespace IpcimWPF
         {
             InitializeComponent();
             LoadData();
+        }
+        private void LoadData()
+        {
+            string filePath = "iplist.csv"; // CSV fájl neve
+            if (!File.Exists(filePath))
+            {
+                MessageBox.Show("CSV fájl nem található: " + filePath);
+                return;
+            }
+
+            records.Clear();
+            var lines = File.ReadAllLines(filePath);
+            foreach (var line in lines.Skip(1)) // első sor a fejléc
+            {
+                var parts = line.Split(';');
+                if (parts.Length == 2)
+                {
+                    records.Add(new IpRecord { DomainName = parts[0], IpAddress = parts[1] });
+                }
+            }
+
+            dgData.ItemsSource = null;
+            dgData.ItemsSource = records;
         }
     }
 }
