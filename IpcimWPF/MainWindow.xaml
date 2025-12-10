@@ -18,6 +18,7 @@
             <Label  Content="Label"  />
             <TextBox TextWrapping="Wrap" Text="TextBox" Width="120"/>
             <Button Content="Button"/>
+            <Button Content="Button"/>
 
         </StackPanel>
         
