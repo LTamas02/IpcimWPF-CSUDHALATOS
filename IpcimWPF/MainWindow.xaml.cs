@@ -8,14 +8,9 @@ namespace csudh
 {
     internal class Program
     {
-        static List<DomainEntry> entries = new List<DomainEntry>();
-
         static void Main(string[] args)
         {
-            ReadFile();
-            PrintList();
         }
-
         
     }
 }
