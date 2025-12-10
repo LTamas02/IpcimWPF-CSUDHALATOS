@@ -70,6 +70,7 @@ namespace IpcimWPF
             tbDomain.Clear();
             tbIp.Clear();
         }
+
         private void btnMentes_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
