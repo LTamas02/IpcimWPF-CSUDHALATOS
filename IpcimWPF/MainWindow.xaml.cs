@@ -15,6 +15,11 @@ namespace IpcimWPF
 {
     public partial class MainWindow : Window
     {
+        public class IpRecord
+        {
+            public string DomainName { get; set; }
+            public string IpAddress { get; set; }
+        }
         private List<IpRecord> records = new List<IpRecord>();
         public MainWindow()
         {
